@@ -1,0 +1,31 @@
+{
+  "name": "docker_tut",
+  "version": "1.0.0",
+  "description": "Docker for beginners",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/8ivek/docker_tut.git"
+  },
+  "keywords": [
+    "Docker",
+    "tutorial",
+    "beginners"
+  ],
+  "author": "Bivek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/8ivek/docker_tut/issues"
+  },
+  "homepage": "https://github.com/8ivek/docker_tut#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "ejs": "^2.5.9",
+    "express": "^4.16.3",
+    "node-couchdb": "^1.3.0",
+    "request": "^2.85.0"
+  }
+}
