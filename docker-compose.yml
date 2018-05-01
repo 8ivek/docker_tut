@@ -2,7 +2,8 @@ version: "3"
 services:
   nodeserver:
     container_name: node-server
-    restart: always
+    image: node:8
+    hostname: node-server.test
     build: .
     ports:
       - "3000:3000"
@@ -12,6 +13,7 @@ services:
   couchdb:
     container_name: couchdb-server
     image: couchdb:latest
+    hostname: couchdb-server.test
     build:
       context: .
       dockerfile: Dockerfile-couchDB

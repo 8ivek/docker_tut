@@ -20,7 +20,7 @@ const couch = new nodeCouchDb({
     port: 5984,
     auth:{
         user: 'admin',
-        pass: 'password'
+        pass: 'admin'
     }
 });
 
@@ -43,6 +43,7 @@ app.get('/',function(req,res){
             //console.log(headers);
         },err =>{
             console.log(err)
+            res.render(err);
         }
     );
 
@@ -61,6 +62,7 @@ app.get('/customer/edit/:id',function(req,res){
             });
         },err =>{
             console.log(err)
+            res.render(err);
         }
     );
 
@@ -87,6 +89,7 @@ app.post('/customer/save/:id',function(req,res){
         },
         function(err){
             res.send(err);
+            res.render(err);
         });
 });
 
@@ -106,6 +109,7 @@ app.post('/customer/add',function(req,res){
             },
             function(err){
                 res.send(err);
+                res.render(err);
             });
     });
 });
@@ -119,10 +123,11 @@ app.post('/customer/delete/:id',function(req,res){
         },
         function(err){
             res.send(err);
+            res.render(err);
         }
     );
 });
 
 app.listen(3000,function(){
-    console.log('Server started on port 3000');
+    console.log('***Server started on port 3000***');
 });

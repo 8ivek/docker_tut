@@ -67,4 +67,6 @@ __intentionally doing 5984__
 - docker container ls --all
 - docker container ls -aq
 
+### Remove all images
+> docker system prune -a
 
