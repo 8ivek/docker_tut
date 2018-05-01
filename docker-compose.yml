@@ -2,7 +2,7 @@ version: "3"
 services:
   nodeserver:
     container_name: node-server
-    image: node:8
+    image: node:latest
     hostname: node-server.test
     build: .
     ports:
