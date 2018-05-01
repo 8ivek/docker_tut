@@ -20,3 +20,7 @@ services:
       - ./data/log:/var/log
     ports:
       - "5984:5984"
+# As per the following reference run line 1 and 2 in your couch db terminal
+# http://docs.couchdb.org/en/2.0.0/install/index.html
+# curl -X PUT http://127.0.0.1:5984/_users
+# curl -X PUT http://127.0.0.1:5984/_replicator
