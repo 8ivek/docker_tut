@@ -1,0 +1,22 @@
+version: "3"
+services:
+  nodeserver:
+    container_name: node-server
+    restart: always
+    build: .
+    ports:
+      - "3000:3000"
+    links:
+      - couchdb
+
+  couchdb:
+    container_name: couchdb-server
+    image: couchdb:latest
+    build:
+      context: .
+      dockerfile: Dockerfile-couchDB
+    volumes:
+      - ./data:/opt/couchdb/data
+      - ./data/log:/var/log
+    ports:
+      - "5984:5984"

@@ -3,13 +3,24 @@ const bodyParser = require ('body-parser');
 const path = require ('path'); // core module we don't have to install it.
 const nodeCouchDb = require ('node-couchdb');
 
+//const Cache = require('node-couchdb-plugin-redis');
+
+// accepts same arguments as [`redis createClient method`](https://www.npmjs.com/package/redis)
+/*const cacheInstance = new Cache({
+    host: 'localhost',
+    port: '6379',
+});*/
+
 const dbName = "shopping_site";
 const viewUrl = "_design/view2/_view/id";
 
 const couch = new nodeCouchDb({
+    host: "couchdb",
+    //protocol: 'https',
+    port: 5984,
     auth:{
         user: 'admin',
-        pass: 'admin'
+        pass: 'password'
     }
 });
 
