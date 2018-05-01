@@ -60,7 +60,10 @@ __intentionally doing 5984__
 ### Running docker composer
 
 > docker-compose up
-> docker-compose up --build
+
+Main Command
+
+> **docker-compose up --build** 
 
 ### List Docker containers (running, all, all in quiet mode)
 - docker container ls
